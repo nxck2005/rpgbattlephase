@@ -1,133 +1,110 @@
 // Source file for enemy attributes and functions.
 // Updated 21st December 2024; nxck2005
 
+#include "enemy.h"
 #include <iostream>
 #include <random>
 
-class Enemy {
-    private:
-        // Currently I don't see the need for any of these attributes being any other data type,
-        // setting them to ints for now
+// Constructor: Initialize Enemy stats using the parameters
+Enemy::Enemy(int mHpIn, int HpIn, int atkIn, int defIn, int luckIn)
+    : maxHp(mHpIn), hp(HpIn), atk(atkIn), def(defIn), luck(luckIn) {}
 
-        // Value for Max HP for the enemy
-        int maxHp = 99;
+// Set enemy's max HP
+void Enemy::setMaxHp(int inHp) {
+    maxHp = inHp;
+}
 
-        // Value for HP of the enemy
-        int hp = 99;
+// Get enemy's max HP
+int Enemy::getMaxHp() {
+    return maxHp;
+}
 
-        // Value for the ATK for the enemy. Used for determining attack strength
-        int atk;
+// Increment enemy's max HP
+void Enemy::incrementMaxHp(int inHp) {
+    maxHp += inHp;
+}
 
-        // Value for the DEF for the enemy. Used for determining how much damage reduction is done towards the enemy.
-        int def;
+// Decrement enemy's max HP
+void Enemy::decrementMaxHp(int inHp) {
+    maxHp -= inHp;
+}
 
-        // Value for LUCK for the enemy. Used for determining chance of critical hits.
-        // Keep it below 100 so it can work with the battle function.
-        int luck;
-    public:
-        Enemy(int mHpIn, int HpIn, int atkIn, int defIn, int luckIn) {
-            maxHp = mHpIn;
-            hp = HpIn;
-            atk = atkIn;
-            def = defIn;
-            luck = luckIn;
-        }
+// Set enemy's HP
+void Enemy::setHp(int inHp) {
+    hp = inHp;
+}
 
-        // Set enemy's max HP
-        void setMaxHp(int inHp) {
-            maxHp = inHp;
-        }
+// Get enemy's HP
+int Enemy::getHp() {
+    return hp;
+}
 
-        // Get enemy's max HP 
-        int getMaxHp() {
-            return maxHp;
-        }
+// Increment HP by given amount
+void Enemy::incrementHp(int inHp) {
+    hp += inHp;
+}
 
-        // Increment enemy's max HP
-        void incrementMaxHp(int inHp) {
-            maxHp += inHp;
-        }
+// Decrement HP by given amount
+void Enemy::decrementHp(int inHp) {
+    hp -= inHp;
+}
 
-        // Decrement enemy's max HP
-        void decrementMaxHp(int inHp) {
-            maxHp -= inHp;
-        }
+// Set enemy's ATK
+void Enemy::setAtk(int inAtk) {
+    atk = inAtk;
+}
 
-        // Set enemy's HP
-        void setHp(int inHp) {
-            hp = inHp;
-        } 
-        // Get enemy's HP
-        int getHp() {
-            return hp;
-        }
-        // Increment HP by given amount
-        void incrementHp(int inHp) {
-            hp += inHp;
-        }
-        // Decrement HP by given amount
-        void decrementHp(int inHp) {
-            hp -= inHp;
-        }
+// Get enemy's ATK
+int Enemy::getAtk() {
+    return atk;
+}
 
-        // Set enemy's ATK
-        void setAtk(int inAtk) {
-            atk = inAtk;
-        }
+// Increment ATK by given amount
+void Enemy::incrementAtk(int inAtk) {
+    atk += inAtk;
+}
 
-        // Get enemy's ATK
-        int getAtk() {
-            return atk;
-        }
+// Decrement ATK by given amount
+void Enemy::decrementAtk(int inAtk) {
+    atk -= inAtk;
+}
 
-        // Increment ATK by given amount
-        void incrementAtk(int inAtk) {
-            atk += inAtk;
-        }
+// Set enemy's DEF
+void Enemy::setDef(int inDef) {
+    def = inDef;
+}
 
-        // Decrement ATK by given amount
-        void decrementAtk(int inAtk) {
-            atk -= inAtk;
-        }
+// Get enemy's DEF
+int Enemy::getDef() {
+    return def;
+}
 
-        // Set enemy's DEF
-        void setDef(int inDef) {
-            def = inDef;
-        }
+// Increment DEF by given amount
+void Enemy::incrementDef(int inDef) {
+    def += inDef;
+}
 
-        // Get enemy's DEF
-        int getDef() {
-            return def;
-        }
+// Decrement DEF by given amount
+void Enemy::decrementDef(int inDef) {
+    def -= inDef;
+}
 
-        // Increment DEF by given amount
-        void incrementDef(int inDef) {
-            def += inDef;
-        }
+// Set enemy's LUCK
+void Enemy::setLuck(int inLuck) {
+    luck = inLuck;
+}
 
-        // Decrement DEF by given amount
-        void decrementDef(int inDef) {
-            def -= inDef;
-        }
+// Get enemy's LUCK
+int Enemy::getLuck() {
+    return luck;
+}
 
-        // Set enemy's LUCK
-        void setLuck(int inLuck) {
-            luck = inLuck;
-        }
+// Increment LUCK by given amount
+void Enemy::incrementLuck(int inLuck) {
+    luck += inLuck;
+}
 
-        // Get enemy's LUCK
-        int getLuck() {
-            return luck;
-        }
-
-        // Increment LUCK by given amount
-        void incrementLuck(int inLuck) {
-            luck += inLuck;
-        }
-
-        // Decrement LUCK by given amount
-        void decrementLuck(int inLuck) {
-            luck -= inLuck;
-        }
-
-};
+// Decrement LUCK by given amount
+void Enemy::decrementLuck(int inLuck) {
+    luck -= inLuck;
+}

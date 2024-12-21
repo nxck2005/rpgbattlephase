@@ -1,8 +1,7 @@
-#include "player.cpp"
-#include "enemy.cpp"
+#include "player.h"
+#include "enemy.h"
 #include "battle.cpp"
 #include <iostream>
-using namespace std;
 
 int main() {
     Enemy enemy(99, 99, 20, 10, 40);
@@ -10,4 +9,5 @@ int main() {
     BattleInstance battle1(&player, &enemy);
     
     battle1.battle();
-} 
+    return 0;
+}

@@ -1,7 +1,7 @@
 #include <iostream>
 #include <random>
-#include "player.cpp"
-#include "enemy.cpp"
+#include "player.h"
+#include "enemy.h"
 using namespace std;
 
 class BattleInstance {
