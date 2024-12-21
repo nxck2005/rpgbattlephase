@@ -9,6 +9,9 @@ class Player {
         // Currently I don't see the need for any of these attributes being any other data type,
         // setting them to ints for now
 
+        // Value for Max HP for the player
+        int maxHp = 99;
+
         // Value for HP of the player
         int hp = 99;
 
@@ -22,6 +25,34 @@ class Player {
         // Keep it below 100 so it can work with the battle function.
         int luck;
     public:
+        Player(int mHpIn, int HpIn, int atkIn, int defIn, int luckIn) {
+            maxHp = mHpIn;
+            hp = HpIn;
+            atk = atkIn;
+            def = defIn;
+            luck = luckIn;
+        }
+
+        // Set player's max HP
+        void setMaxHp(int inHp) {
+            maxHp = inHp;
+        }
+
+        // Get player's max HP 
+        int getMaxHp() {
+            return maxHp;
+        }
+
+        // Increment player's max HP
+        void incrementMaxHp(int inHp) {
+            maxHp += inHp;
+        }
+
+        // Decrement player's max HP
+        void decrementMaxHp(int inHp) {
+            maxHp -= inHp;
+        }
+        
         // Set player's HP
         void setHp(int inHp) {
             hp = inHp;

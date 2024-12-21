@@ -9,6 +9,9 @@ class Enemy {
         // Currently I don't see the need for any of these attributes being any other data type,
         // setting them to ints for now
 
+        // Value for Max HP for the enemy
+        int maxHp = 99;
+
         // Value for HP of the enemy
         int hp = 99;
 
@@ -19,8 +22,37 @@ class Enemy {
         int def;
 
         // Value for LUCK for the enemy. Used for determining chance of critical hits.
+        // Keep it below 100 so it can work with the battle function.
         int luck;
     public:
+        Enemy(int mHpIn, int HpIn, int atkIn, int defIn, int luckIn) {
+            maxHp = mHpIn;
+            hp = HpIn;
+            atk = atkIn;
+            def = defIn;
+            luck = luckIn;
+        }
+
+        // Set enemy's max HP
+        void setMaxHp(int inHp) {
+            maxHp = inHp;
+        }
+
+        // Get enemy's max HP 
+        int getMaxHp() {
+            return maxHp;
+        }
+
+        // Increment enemy's max HP
+        void incrementMaxHp(int inHp) {
+            maxHp += inHp;
+        }
+
+        // Decrement enemy's max HP
+        void decrementMaxHp(int inHp) {
+            maxHp -= inHp;
+        }
+
         // Set enemy's HP
         void setHp(int inHp) {
             hp = inHp;
