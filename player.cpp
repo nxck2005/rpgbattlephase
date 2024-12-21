@@ -10,7 +10,7 @@ class Player {
         // setting them to ints for now
 
         // Value for HP of the player
-        int hp;
+        int hp = 99;
 
         // Value for the ATK for the player. Used for determining attack strength
         int atk;
@@ -19,6 +19,7 @@ class Player {
         int def;
 
         // Value for LUCK for the player. Used for determining chance of critical hits.
+        // Keep it below 100 so it can work with the battle function.
         int luck;
     public:
         // Set player's HP
@@ -37,4 +38,65 @@ class Player {
         void decrementHp(int inHp) {
             hp -= inHp;
         }
+
+        // Set player's ATK
+        void setAtk(int inAtk) {
+            atk = inAtk;
+        }
+
+        // Get player's ATK
+        int getAtk() {
+            return atk;
+        }
+
+        // Increment ATK by given amount
+        void incrementAtk(int inAtk) {
+            atk += inAtk;
+        }
+
+        // Decrement ATK by given amount
+        void decrementAtk(int inAtk) {
+            atk -= inAtk;
+        }
+
+        // Set player's DEF
+        void setDef(int inDef) {
+            def = inDef;
+        }
+
+        // Get player's DEF
+        int getDef() {
+            return def;
+        }
+
+        // Increment DEF by given amount
+        void incrementDef(int inDef) {
+            def += inDef;
+        }
+
+        // Decrement DEF by given amount
+        void decrementDef(int inDef) {
+            def -= inDef;
+        }
+
+        // Set player's LUCK
+        void setLuck(int inLuck) {
+            luck = inLuck;
+        }
+
+        // Get player's LUCK
+        int getLuck() {
+            return luck;
+        }
+
+        // Increment LUCK by given amount
+        void incrementLuck(int inLuck) {
+            luck += inLuck;
+        }
+
+        // Decrement LUCK by given amount
+        void decrementLuck(int inLuck) {
+            luck -= inLuck;
+        }
+
 };

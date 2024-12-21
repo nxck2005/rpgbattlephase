@@ -14,3 +14,7 @@ Enemy attributes:
 ATK
 DEF
 LUCK
+
+Feature to add later:
+Multiple enemy support
+Mana system

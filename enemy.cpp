@@ -10,7 +10,7 @@ class Enemy {
         // setting them to ints for now
 
         // Value for HP of the enemy
-        int hp;
+        int hp = 99;
 
         // Value for the ATK for the enemy. Used for determining attack strength
         int atk;
@@ -37,4 +37,65 @@ class Enemy {
         void decrementHp(int inHp) {
             hp -= inHp;
         }
+
+        // Set enemy's ATK
+        void setAtk(int inAtk) {
+            atk = inAtk;
+        }
+
+        // Get enemy's ATK
+        int getAtk() {
+            return atk;
+        }
+
+        // Increment ATK by given amount
+        void incrementAtk(int inAtk) {
+            atk += inAtk;
+        }
+
+        // Decrement ATK by given amount
+        void decrementAtk(int inAtk) {
+            atk -= inAtk;
+        }
+
+        // Set enemy's DEF
+        void setDef(int inDef) {
+            def = inDef;
+        }
+
+        // Get enemy's DEF
+        int getDef() {
+            return def;
+        }
+
+        // Increment DEF by given amount
+        void incrementDef(int inDef) {
+            def += inDef;
+        }
+
+        // Decrement DEF by given amount
+        void decrementDef(int inDef) {
+            def -= inDef;
+        }
+
+        // Set enemy's LUCK
+        void setLuck(int inLuck) {
+            luck = inLuck;
+        }
+
+        // Get enemy's LUCK
+        int getLuck() {
+            return luck;
+        }
+
+        // Increment LUCK by given amount
+        void incrementLuck(int inLuck) {
+            luck += inLuck;
+        }
+
+        // Decrement LUCK by given amount
+        void decrementLuck(int inLuck) {
+            luck -= inLuck;
+        }
+
 };
