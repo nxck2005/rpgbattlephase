@@ -52,6 +52,9 @@ class BattleInstance {
 
                 turnDone = false;
 
+                cout << "Your health: " << player->getHp() << "/" << player->getMaxHp() << endl;
+                cout << "Enemy's health: " << enemy->getHp() << "/" << enemy->getMaxHp() << endl;
+
                 // Player's turn
                 if (!turnDone) {
                     cout << "Your turn! Attack, or heal? (1 or 2)" << endl;
@@ -74,7 +77,7 @@ class BattleInstance {
                         // Decrement enemy's health by final attack stat
                         enemy->decrementHp(finalAtk);
                         
-                        cout << "Did " << finalAtk << "damage to enemy!" << endl;
+                        cout << "Did " << finalAtk << " damage to enemy!" << endl;
 
                         // If enemy is already dead after this, prematurely exit from the battle
                         if (enemy->getHp() <= 0) {
@@ -104,7 +107,8 @@ class BattleInstance {
                         }
                         turnDone = true;
                     } else {
-                        cout << "Not a good choice! Choose again.." << endl;
+                        cout << "You missed! (wrong input..)" << endl;
+                        turnDone = true;
                     }
                 }
 
