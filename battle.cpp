@@ -122,6 +122,7 @@ class BattleInstance {
                 int enemyFinalAtk;
                 if (enemyCritFlag) {
                     enemyFinalAtk = (enemyBaseAtk * 3 + enemy->getLuck()) / player->getDef();
+                    cout << "BIG SHOT!!!" << endl;
                 } else {
                     enemyFinalAtk = (enemyBaseAtk + enemy->getLuck()) / player->getDef();
                 }
